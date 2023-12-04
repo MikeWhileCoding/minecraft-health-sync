@@ -1,4 +1,4 @@
-name: Minecraft Health Sync
+name: Minecraft_Health_Sync
 version: '${project.version}'
 main: me.mikewhilecoding.minecraft_health_sync.MinecraftHealthSync
 api-version: 1.20
