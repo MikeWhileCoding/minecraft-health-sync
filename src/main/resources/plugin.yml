@@ -1,0 +1,7 @@
+name: Minecraft Health Sync
+version: '${project.version}'
+main: me.mikewhilecoding.minecraft_health_sync.MinecraftHealthSync
+api-version: 1.20
+authors: [MIke de Groot]
+description: Minecraft Plugin for synchronizing players their health
+website: mikedegroot.dev
