@@ -37,6 +37,11 @@ public class SyncPlayers {
         for (Entity player : players) {
             if (entity != player) {
                 Damageable damageable = (Damageable) player;
+                if (damageable.getHealth() - damage < 0) {
+                    damageable.setHealth(0);
+                    Bukkit.getLogger().info("Player " + player.getName() + " has died.");
+                    break;
+                }
                 damageable.setHealth(damageable.getHealth() - damage);
                 Bukkit.getLogger().info("Damaged player " + player.getName() + " by " + damage + " HP.");
             }
