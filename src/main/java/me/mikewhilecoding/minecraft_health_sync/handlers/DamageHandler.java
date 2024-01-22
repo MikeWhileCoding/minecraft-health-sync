@@ -22,6 +22,10 @@ public class DamageHandler implements Listener {
     public void onDamage(EntityDamageEvent event) {
         Bukkit.getLogger().info("Entity has been damaged!" + event.getEntity().getName());
 
+        if (event.getDamage(EntityDamageEvent.DamageModifier.BLOCKING) != 0) {
+            return;
+        }
+
         for (Entity player : syncPlayers.getPlayers()) {
             if (event.getEntity() == player) {
                 syncPlayers.damagePlayers(event.getEntity(), event.getDamage());
